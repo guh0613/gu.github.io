@@ -374,7 +374,7 @@
                 
               
 
-              <time title="创建时间：2018-12-15 00:08:00 / 修改时间：11:23:02" itemprop="dateCreated datePublished" datetime="2018-12-15T00:08:00+08:00">2018-12-15</time>
+              <time title="创建时间：2018-12-15 00:08:00 / 修改时间：11:38:38" itemprop="dateCreated datePublished" datetime="2018-12-15T00:08:00+08:00">2018-12-15</time>
             
 
             
@@ -430,16 +430,20 @@
 <p>termux一开始是什么都没有的，一切都需要自己去安装。这里termux提供了一个pkg命令，你可以认为它是linux apt命令的升级版，向下兼容apt。</p>
 </blockquote>
 <p>这应该是第一次打开时的样子:<img src="http://img04.sogoucdn.com/app/a/100520146/04cf3dbe1477ff8a640ad75f4a05d9b9" alt="first"></p>
-<h3 id="自带的基本操作"><a href="#自带的基本操作" class="headerlink" title="自带的基本操作"></a>自带的基本操作</h3><p>长按屏幕选中文本后，除了会显示复制粘贴外，还会有”更多…”按钮，里面提供了一些便携功能。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">   Select URL: 选择网址</span><br><span class="line">    Share transcipt: 分享命令</span><br><span class="line">    Reset: 重置</span><br><span class="line">   Kill process: 强制退出并结束运行</span><br><span class="line">   Style:风格</span><br><span class="line">    Help: 帮助</span><br><span class="line">``` </span><br><span class="line">### 调出隐藏键盘</span><br><span class="line">隐藏键盘提供一些手机键盘打不出的键，例如ctrl。</span><br><span class="line">向右划调出侧滑栏，长按```keyboard```键即可。</span><br><span class="line"></span><br><span class="line">### 修改更新源</span><br><span class="line">termux官方更新源在国外，比较</span><br><span class="line">卡顿和慢，因此需要更新国内源。</span><br><span class="line">``` bash</span><br><span class="line">vi  $PREFIX/etc/apt/sources.list</span><br><span class="line">``` </span><br><span class="line">关于这里的绝对路径，放到下一期再说。</span><br><span class="line">接下来删除原本的更新源地址，换上清华大学源:```http://mirrors.tuna.tsinghua.edu.cn/termux</span><br></pre></td></tr></table></figure></p>
-<h3 id="安装常用工具"><a href="#安装常用工具" class="headerlink" title="安装常用工具"></a>安装常用工具</h3><p>首先更新一下内核:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">＄ pkg update</span><br></pre></td></tr></table></figure></p>
+<h3 id="自带的基本操作"><a href="#自带的基本操作" class="headerlink" title="自带的基本操作"></a>自带的基本操作</h3><p>长按屏幕选中文本后，除了会显示复制粘贴外，还会有”更多…”按钮，里面提供了一些便携功能。</p>
+<p>  Select URL: 选择网址<br>    Share transcipt: 分享命令<br>    Reset: 重置<br>   Kill process: 强制退出并结束运行<br>   Style:风格<br>    Help: 帮助</p>
+<h3 id="调出隐藏键盘"><a href="#调出隐藏键盘" class="headerlink" title="调出隐藏键盘"></a>调出隐藏键盘</h3><p>隐藏键盘提供一些手机键盘打不出的键，例如ctrl。<br>向右划调出侧滑栏，长按<code>keyboard</code>键即可。</p>
+<h3 id="修改更新源"><a href="#修改更新源" class="headerlink" title="修改更新源"></a>修改更新源</h3><p>termux官方更新源在国外，比较<br>卡顿和慢，因此需要更新国内源。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi  <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br></pre></td></tr></table></figure></p>
+<p>关于这里的绝对路径，放到下一期再说。<br>接下来删除原本的更新源地址，换上清华大学源:<br><code>http://mirrors.tuna.tsinghua.edu.cn/termux</code></p>
+<h3 id="安装常用工具"><a href="#安装常用工具" class="headerlink" title="安装常用工具"></a>安装常用工具</h3><p>首先更新一下内核:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">＄ pkg update</span><br></pre></td></tr></table></figure></p>
 <p>安装常用工具:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">＄pkg install vim curl wget git unrar unzip</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">＄pkg install vim curl wget git unrar unzip</span><br></pre></td></tr></table></figure>
 <h3 id="termux优化–ohmyzsh"><a href="#termux优化–ohmyzsh" class="headerlink" title="termux优化–ohmyzsh"></a>termux优化–ohmyzsh</h3><p>不知道是哪个大佬搞的，它将会使用zsh作为termux的shell来使用。<br>通过运行脚本，你的termux会改头换面，使用起来方便不少，大幅度提升效率，基本必装。</p>
 <blockquote>
-<p>执行curl命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;</span><br></pre></td></tr></table></figure></p>
+<p>执行curl命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)</span>"</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p>如果要求储存权限，一定要同意。<br>安装完成后需要进行风格设置，根据自己喜欢的风格输入对应数字完成修改。<br>第一个数字是主题风格，第二个数字是字体。<br>改完之后输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">以后如果还想改，执行以下命令:</span><br></pre></td></tr></table></figure></p>
-<p>$ ~/termux-ohmyzsh/install.sh<br><code>`</code><br>重新输入数字即可。</p>
+<p>如果要求储存权限，一定要同意。<br>安装完成后需要进行风格设置，根据自己喜欢的风格输入对应数字完成修改。<br>第一个数字是主题风格，第二个数字是字体。<br>改完之后输入<code>exit</code>重启该会话后生效。<br>以后如果还想改，执行以下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ~/termux-ohmyzsh/install.sh</span><br></pre></td></tr></table></figure></p>
+<p>重新输入数字即可。</p>
 <h1 id="教程-一-小结"><a href="#教程-一-小结" class="headerlink" title="教程(一)小结"></a>教程(一)小结</h1><p>到此termux的初步设置就结束了，之后进入会默认进入＄home路径，里面的<code>storage</code>文件夹与手机内部储存是相连接的，可以快速操作。</p>
 <p>总的来说，termux与电脑的linux有细微的区别，但是用过linux的基本不会感到困难。</p>
 <p>下周见。</p>
